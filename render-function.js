@@ -10,6 +10,18 @@ export function renderHaunted(spookyScaryStuff) {
     const img = document.createElement('img');
     img.src = spookyScaryStuff.img;
 
-    productCard.append(img, productName);
+    const productRating = document.createElement('h2');
+    productRating.textContent = spookyScaryStuff.rating;
+
+    const productPrice = document.createElement('h2');
+    productPrice.textContent = spookyScaryStuff.price;
+
+    const productOrigin = document.createElement('h2');
+    productOrigin.textContent = spookyScaryStuff.origin;
+
+    const productDescription = document.createElement('p');
+    productDescription.textContent = spookyScaryStuff.description
+
+    productCard.append(img, productName, productRating, productPrice, productOrigin, productDescription);
     return productCard;
 }
