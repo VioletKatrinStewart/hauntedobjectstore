@@ -32,7 +32,7 @@ export const hauntedStuff = [
     {
         id: '4',
         name: 'Key',
-        img: './assets/key.jpg',
+        img: './assets/key2.png',
         rating: '4',
         price: '$75',
         origin: 'Brazil, date unknown',
