@@ -1,4 +1,4 @@
-import { hauntedStuff } from "./hauntedstuff.js";
+import { hauntedStuff } from './hauntedstuff.js';
 
 export function renderHaunted(spookyScaryStuff) {
     const productCard = document.createElement('div');
@@ -20,7 +20,7 @@ export function renderHaunted(spookyScaryStuff) {
     productOrigin.textContent = spookyScaryStuff.origin;
 
     const productDescription = document.createElement('p');
-    productDescription.textContent = spookyScaryStuff.description
+    productDescription.textContent = spookyScaryStuff.description;
 
     productCard.append(img, productName, productRating, productPrice, productOrigin, productDescription);
     return productCard;

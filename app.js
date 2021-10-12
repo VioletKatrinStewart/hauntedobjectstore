@@ -1,5 +1,5 @@
-import { hauntedStuff } from "./hauntedStuff.js";
-import { renderHaunted } from "./render-function.js";
+import { hauntedStuff } from './hauntedStuff.js';
+import { renderHaunted } from './render-function.js';
 
 const productList = document.getElementById('product-list');
 
