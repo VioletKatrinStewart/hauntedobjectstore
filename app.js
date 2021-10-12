@@ -1,8 +1,10 @@
-// import functions and grab DOM elements
+import { hauntedStuff } from './hauntedStuff.js';
+import { renderHaunted } from './render-function.js';
 
-// initialize global state
+const productList = document.getElementById('product-list');
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+for (let spookyScaryStuff of hauntedStuff) {
+    const spookyCard = renderHaunted(spookyScaryStuff);
+    productList.append(spookyCard);
+
+}
