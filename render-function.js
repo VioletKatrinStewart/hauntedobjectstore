@@ -1,4 +1,4 @@
-import { hauntedStuff } from './hauntedstuff.js';
+//import { hauntedStuff } from './hauntedstuff.js';
 
 export function renderHaunted(spookyScaryStuff) {
     const productCard = document.createElement('div');
