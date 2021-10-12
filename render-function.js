@@ -11,10 +11,10 @@ export function renderHaunted(spookyScaryStuff) {
     img.src = spookyScaryStuff.img;
 
     const productRating = document.createElement('h2');
-    productRating.textContent = spookyScaryStuff.rating;
+    productRating.textContent = `cursed rating ${spookyScaryStuff.rating} /10`;
 
     const productPrice = document.createElement('h2');
-    productPrice.textContent = spookyScaryStuff.price;
+    productPrice.textContent = `${spookyScaryStuff.price} dollars`;
 
     const productOrigin = document.createElement('h2');
     productOrigin.textContent = spookyScaryStuff.origin;

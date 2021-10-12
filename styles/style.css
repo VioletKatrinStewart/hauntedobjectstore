@@ -5,6 +5,10 @@
     --color-4: #330002;
 }
 
+#top-header {
+    color: var(--color-1)
+}
+
 body {
     text-align: center;
 }
