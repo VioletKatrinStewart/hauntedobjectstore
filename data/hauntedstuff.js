@@ -36,7 +36,7 @@ export const hauntedStuff = [
         rating: '4',
         price: 75,
         origin: 'Brazil, date unknown',
-        description: 'Our donor for this key provided very little information about it\'s origin but based on how eager her was to get rid of the key and the look of fear in his eye we are suspecting it is indeed haunted. We are offering it for a very low price so get this key while it\'s still in stock!'
+        description: 'Our donor for these keys provided very little information about their origin but based on how eager her was to get rid of the keys and the look of fear in his eye we are suspecting they are all indeed haunted. We are offering them for a very low price so get these keys while they are still in stock!'
     },
 
     {
