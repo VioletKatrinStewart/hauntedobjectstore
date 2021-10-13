@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { findById, getCart } from '../utils.js';
+import { addItem, findById, getCart } from '../utils.js';
 //findbyID is a function from yesterday which I will go back and write at the end of the day
 
 const test = QUnit.test;
@@ -21,8 +21,8 @@ test('time to test a function', (expect) => {
 test('getCart should return the cart if it exisits', (expect)=>{
     // arrange
     const fakeCart = [
-        { id: '1', qty: 3 },
-        { id: '3', qty: 4 }
+        { id: '1', quantity: 3 },
+        { id: '3', quantity: 4 }
     ];
     localStorage.setItem('CART', JSON.stringify(fakeCart));
     // act
@@ -36,9 +36,25 @@ test('getCart should return an empty array if the cart does not exist', (expect)
     // nothing to arrange bc nothing in localStorage
 
     // act 
+    localStorage.removeItem('CART');
     const cart = getCart();
 
     // assert
     expect.deepEqual(cart, []);
+});
+
+test('addItem should increment the quantity if the item in cart', (expect)==>{
+    const fakeCart = [
+        { id: '1', quantity: 3 },
+        { id: '3', quantity: 4 }
+    ];
+    localStorage.setItem('CART', JSON.stringify(fakeCart));
+    addItem('1');
+    const cart = getCart();
+        { id: '1', quantity: 4 },
+];
+
+ecpect.deepEqual(cart, expected);
+
 });
 
