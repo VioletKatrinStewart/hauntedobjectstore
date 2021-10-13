@@ -22,6 +22,9 @@ export function renderHaunted(spookyScaryStuff) {
     const productDescription = document.createElement('p');
     productDescription.textContent = spookyScaryStuff.description;
 
-    productCard.append(img, productName, productRating, productPrice, productOrigin, productDescription);
+    const addButton = document.createElement('button');
+    addButton.textContent = 'Add to cart';
+
+    productCard.append(img, productName, productRating, productPrice, productOrigin, productDescription, addButton);
     return productCard;
 }
