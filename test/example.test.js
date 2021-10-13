@@ -44,7 +44,6 @@ test('getCart should return an empty array if the cart does not exist', (expect)
 });
 
 test('addItem should increment the quantity if item in cart', (expect)=>{
-    // arrange
     const fakeCart = [
         { id: '1', qty: 3 },
         { id: '3', qty: 4 }
@@ -57,8 +56,15 @@ test('addItem should increment the quantity if item in cart', (expect)=>{
         { id: '1', qty: 4 },
         { id: '3', qty: 4 }
     ];
-    // assert
     expect.deepEqual(cart, expected);
 });
 
 
+test('addItem should add an item if its not already there', (expect) =>{
+    localStorage.removeItem('CART');
+    const expected = [{ id: '1', qty: 1 }];
+    addItem('1');
+    const cart = getCart();
+    expect.deepEqual(cart, expected);
+
+});

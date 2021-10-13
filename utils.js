@@ -10,6 +10,20 @@ export function getCart(){
     return cart;
 }
 
+export function addItem(id){
+    const cart = getCart();
+    const cartItem = findById(id, cart);
+    if (cartItem){
+        cartItem.quantity++;
+    } else {
+        const newItem = { id: id, quantity: 1 };
+        cart.push(newItem);
+
+    }
+    const stringCart = JSON.stringify(cart);
+    localStorage.setItem('CART', stringCart);
+}
+
 
 // getCart
     // get the cart from local storage
