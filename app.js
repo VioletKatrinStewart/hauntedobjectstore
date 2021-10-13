@@ -8,7 +8,12 @@ for (let spookyScaryStuff of hauntedStuff) {
     const spookyCard = renderHaunted(spookyScaryStuff);
     productList.append(spookyCard);
 
-}
+};
 
-//const addButtons 
-//I FORGOT TO ADD MY ADD BUTTONS 
+const addButtons = document.querySelectorAll('.add-button'); // list of all our buttons
+for (let addBtn of addButtons){
+    addBtn.addEventListener('click', ()=>{
+        addItem(addBtn.id);
+        alert('Added item to cart');
+    });
+}
