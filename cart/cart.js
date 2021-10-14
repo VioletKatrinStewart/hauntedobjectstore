@@ -5,7 +5,7 @@
 import { calculateOrderTotal, findById, toUSD } from '../utils.js';
 import { hauntedStuff } from '../data/hauntedstuff.js';
 import { cart } from '../data/cart-data.js';
-import { findById } from '../utils.js';
+
 
 const tbody = document.getElementById('table-body');
 for (let cartItem of cart){
