@@ -11,9 +11,10 @@ export function getCart(){
 }
 
 export function addItem(id){
+    console.log(id);
     const cart = getCart();
     const cartItem = findById(id, cart);
-    console.log('hi');
+    //console.log('hi');
     if (cartItem){
         cartItem.quantity++;
     } else {

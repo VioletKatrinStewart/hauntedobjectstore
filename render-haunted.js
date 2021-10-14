@@ -23,6 +23,7 @@ export function renderHaunted(spookyScaryStuff) {
     productDescription.textContent = spookyScaryStuff.description;
 
     const addButton = document.createElement('button');
+    addButton.id = spookyScaryStuff.id;
     addButton.classList.add('add-button');
     addButton.textContent = 'Add to cart';
 

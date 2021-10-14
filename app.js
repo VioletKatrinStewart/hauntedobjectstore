@@ -12,7 +12,9 @@ const addButtons = document.querySelectorAll('.add-button');
 //console.log(addButtons[0]); 
 for (let addBtn of addButtons){
     addBtn.addEventListener('click', ()=>{
+        //console.log(addButtons);
         addItem(addBtn.id);
+        //console.log('add button id', addBtn.id);
         alert('Added item to cart');
     });
 }
