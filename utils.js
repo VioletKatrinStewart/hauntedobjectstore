@@ -24,6 +24,13 @@ export function addItem(id){
     localStorage.setItem('CART', stringCart);
 }
 
+export function calculateOrderTotal(cart, hauntedStuff) {
+    let orderTotal = 0;
+    for (let item of cart){
+        const hauntedName = findById(item.id, hauntedStuff);
+        orderTotal = orderTotal + hauntedStuff.price * item.qty;
+    }
+    return orderTotal;
 
 // getCart
     // get the cart from local storage
