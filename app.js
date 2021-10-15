@@ -1,6 +1,6 @@
 import { hauntedStuff } from './data/hauntedstuff.js';
 import { renderHaunted } from './render-haunted.js';
-import { addItem, calculateOrderTotal } from './utils.js';
+import { addItem } from './utils.js';
 
 
 const productList = document.getElementById('product-list');
