@@ -16,9 +16,9 @@ export function addItem(id){
     const cartItem = findById(id, cart);
     //console.log('hi');
     if (cartItem){
-        cartItem.quantity++;
+        cartItem.qty++;
     } else {
-        const newItem = { id: id, quantity: 1 };
+        const newItem = { id: id, qty: 1 };
         cart.push(newItem);
 
     }
