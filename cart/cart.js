@@ -2,10 +2,12 @@
     //{ id: '1', qty: 6 },
     //{ id: '4', qty: 5 },
 //]; 
-import { findById, getCart } from '../utils.js';
+import { findById, getCart, clearCart } from '../utils.js';
 import { hauntedStuff } from '../data/hauntedstuff.js';
 //import { cart } from '../data/cart-data.js';
 import { renderLine } from '../render-line-items.js';
+
+const orderButton = document.getElementById('order-button');
 
 const cart = getCart();
 const tbody = document.getElementById('table-body');
@@ -16,3 +18,11 @@ for (let cartItem of cart){
     tbody.appendChild(tr);
     //console.log('cartItem: ', cartItem);
 }
+
+orderButton.addEventListener('click', () =>{
+    //console.log('click');
+    clearCart();
+    //console.log('clear cart');
+    alert('Your order has been placed!');
+    window.location.replace('..');
+});git 
