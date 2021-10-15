@@ -11,12 +11,14 @@ export function getCart(){
 }
 
 export function addItem(id){
+    //console.log(id);
     const cart = getCart();
     const cartItem = findById(id, cart);
+    //console.log('hi');
     if (cartItem){
-        cartItem.quantity++;
+        cartItem.qty++;
     } else {
-        const newItem = { id: id, quantity: 1 };
+        const newItem = { id: id, qty: 1 };
         cart.push(newItem);
 
     }
@@ -24,6 +26,16 @@ export function addItem(id){
     localStorage.setItem('CART', stringCart);
 }
 
+
+export function calculateOrderTotal(cart, hauntedStuff) {
+    let orderTotal = 0;
+    for (let item of cart){
+        const hauntedName = findById(item.id, hauntedStuff);
+        orderTotal = orderTotal + hauntedName.price * item.qty;
+    }
+    return orderTotal;
+}
+    
 
 // getCart
     // get the cart from local storage

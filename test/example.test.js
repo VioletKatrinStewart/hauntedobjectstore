@@ -1,10 +1,25 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { addItem, getCart } from '../utils.js';
+import { hauntedStuff } from '../data/hauntedstuff.js';
+import { addItem, getCart, findById } from '../utils.js';
 //findById,
 //findbyID is a function from yesterday which I will go back and write at the end of the day
 
 const test = QUnit.test;
+
+test('findById should return the item matching the ID', (expect)=>{
+    const expected = { 
+        id: '4',
+        name: 'Key',
+        img: './assets/key2.png',
+        rating: '4',
+        price: 75,
+        origin: 'Brazil, date unknown',
+        description: 'Our donor for these keys provided very little information about their origin but based on how eager her was to get rid of the keys and the look of fear in his eye we are suspecting they are all indeed haunted. We are offering them for a very low price so get these keys while they are still in stock!'
+    };
+    const actual = findById('4', hauntedStuff);
+    expect.deepEqual(actual, expected);
+});
 
 test('time to test a function', (expect) => {
     //Arrange
