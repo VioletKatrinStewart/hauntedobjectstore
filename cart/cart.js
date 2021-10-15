@@ -22,7 +22,7 @@ for (let cartItem of cart){
 
 
 const hauntedTotal = document.getElementById('total');
-hauntedTotal.textContent = calculateOrderTotal(cart, hauntedStuff);
+hauntedTotal.textContent = calculateOrderTotal(cart, hauntedStuff) + ` = total`;
 
 orderButton.addEventListener('click', () =>{
     //console.log('click');
