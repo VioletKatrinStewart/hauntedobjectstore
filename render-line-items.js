@@ -9,10 +9,10 @@ export function renderLine(cartItem, prodData) {
     tdPrice.textContent = prodData.price;
 
     const tdQuantity = document.createElement('td');
-    tdQuantity.textContent = cartItem.quantity;
+    tdQuantity.textContent = cartItem.qty;
 
     const tdTotal = document.createElement('td');
-    tdTotal.textContent = (cartItem.quantity * prodData.price).toFixed(2);
+    tdTotal.textContent = (cartItem.qty * prodData.price).toFixed(2);
 
     tr.append(tdNmae, tdPrice, tdQuantity, tdTotal);
 
