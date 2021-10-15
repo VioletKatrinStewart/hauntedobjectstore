@@ -2,7 +2,7 @@
     //{ id: '1', qty: 6 },
     //{ id: '4', qty: 5 },
 //]; 
-import { findById, getCart, clearCart } from '../utils.js';
+import { findById, getCart, clearCart, calculateOrderTotal } from '../utils.js';
 import { hauntedStuff } from '../data/hauntedstuff.js';
 //import { cart } from '../data/cart-data.js';
 import { renderLine } from '../render-line-items.js';
@@ -18,6 +18,11 @@ for (let cartItem of cart){
     tbody.appendChild(tr);
     //console.log('cartItem: ', cartItem);
 }
+
+
+
+const hauntedTotal = document.getElementById('total');
+hauntedTotal.textContent = calculateOrderTotal(cart, hauntedStuff) + ` = total`;
 
 orderButton.addEventListener('click', () =>{
     //console.log('click');
