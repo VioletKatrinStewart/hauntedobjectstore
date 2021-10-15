@@ -29,6 +29,7 @@ export function addItem(id){
 
 export function calculateOrderTotal(cart, hauntedStuff) {
     let orderTotal = 0;
+    //console.log(cart);
     for (let item of cart){
         const hauntedName = findById(item.id, hauntedStuff);
         orderTotal = orderTotal + hauntedName.price * item.qty;
