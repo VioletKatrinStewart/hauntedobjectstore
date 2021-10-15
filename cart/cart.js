@@ -25,4 +25,4 @@ orderButton.addEventListener('click', () =>{
     //console.log('clear cart');
     alert('Your order has been placed!');
     window.location.replace('..');
-});git 
+}); 
