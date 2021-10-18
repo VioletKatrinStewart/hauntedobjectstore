@@ -47,11 +47,11 @@ export function getProducts() {
     let productString = localStorage.getItem('PRODUCTS');
     const productObject = JSON.parse(productString);
 
+    
     if (!productObject) {
         let productString = JSON.stringify(hauntedStuff);
         localStorage.setItem('PRODUCTS', productString);
-
-        return productObject || hauntedStuff;
-
+       
     }
+    return productObject || hauntedStuff;
 }

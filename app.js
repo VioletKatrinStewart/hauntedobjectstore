@@ -3,7 +3,7 @@ import { renderHaunted } from './render-haunted.js';
 import { addItem, getProducts } from './utils.js';
 
 let hauntedStuff = getProducts();
-
+console.log(hauntedStuff);
 const productList = document.getElementById('product-list');
 for (let spookyScaryStuff of hauntedStuff) {
     const spookyCard = renderHaunted(spookyScaryStuff);
