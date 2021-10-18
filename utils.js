@@ -40,3 +40,18 @@ export function calculateOrderTotal(cart, hauntedStuff) {
 export function clearCart() {
     localStorage.removeItem('CART');
 }
+
+import { hauntedStuff } from './data/hauntedstuff.js';
+
+export function getProducts() {
+    let productString = localStorage.getItem('PRODUCTS');
+    const productObject = JSON.parse(productString);
+
+    if (!productObject) {
+        let productString = JSON.stringify(hauntedStuff);
+        localStorage.setItem('PRODUCTS', productString);
+
+        return productObject || hauntedStuff;
+
+    }
+}
