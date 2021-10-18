@@ -1,9 +1,11 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { hauntedStuff } from '../data/hauntedstuff.js';
-import { addItem, getCart, findById } from '../utils.js';
+//import { hauntedStuff } from '../data/hauntedstuff.js';
+import { addItem, getCart, findById, getProducts } from '../utils.js';
 //findById,
 //findbyID is a function from yesterday which I will go back and write at the end of the day
+
+let hauntedStuff = getProducts();
 
 const test = QUnit.test;
 

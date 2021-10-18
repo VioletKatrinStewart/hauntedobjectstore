@@ -2,10 +2,12 @@
     //{ id: '1', qty: 6 },
     //{ id: '4', qty: 5 },
 //]; 
-import { findById, getCart, clearCart, calculateOrderTotal } from '../utils.js';
-import { hauntedStuff } from '../data/hauntedstuff.js';
+import { findById, getCart, clearCart, calculateOrderTotal, getProducts } from '../utils.js';
+//import { hauntedStuff } from '../data/hauntedstuff.js';
 //import { cart } from '../data/cart-data.js';
 import { renderLine } from '../render-line-items.js';
+
+let hauntedStuff = getProducts();
 
 const orderButton = document.getElementById('order-button');
 
