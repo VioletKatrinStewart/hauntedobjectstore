@@ -1,9 +1,11 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { hauntedStuff } from '../data/hauntedstuff.js';
-import { addItem, getCart, findById } from '../utils.js';
+//import { hauntedStuff } from '../data/hauntedstuff.js';
+import { addProducts, addItem, getCart, findById, getProducts } from '../utils.js';
 //findById,
 //findbyID is a function from yesterday which I will go back and write at the end of the day
+
+let hauntedStuff = getProducts();
 
 const test = QUnit.test;
 
@@ -83,4 +85,24 @@ test('addItem should add an item if its not already there', (expect) =>{
     const cart = getCart();
     expect.deepEqual(cart, expected);
 
+});
+
+test('addProduct should add a product to the localStorage array', (expect)=>{
+    localStorage.removeItem('PRODUCTS');
+    let products = getProducts();
+    let string = JSON.stringify(products);
+    localStorage.setItem('PRODUCTS', string);
+    const newHauntedProduct = {
+        id: '6',
+        name: 'Haunted Dice',
+        img: '../assets/dice.jpg',
+        rating: '8',
+        price: '$1,000',
+        origin: 'uknown',
+        description: 'These dice are very old and very haunted'
+
+    };
+    addProducts(newHauntedProduct);
+    products = getProducts();
+    expect.equal(products.length, 6);
 });
