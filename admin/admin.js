@@ -1,4 +1,4 @@
-import { getProducts } from '../utils.js';
+import { addProducts } from '../utils.js';
 
 const form = document.getElementById('product-form');
 
@@ -16,6 +16,7 @@ form.addEventListener('submit', (e) => {
 
     };
 
-    getProducts(newHaunted);
+    addProducts(newHaunted);
     console.log(newHaunted);
+
 });

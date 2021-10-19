@@ -55,3 +55,11 @@ export function getProducts() {
     }
     return productObject || hauntedStuff;
 }
+
+export function addProducts() {
+    
+
+
+}
+
+

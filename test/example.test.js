@@ -1,7 +1,7 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
 //import { hauntedStuff } from '../data/hauntedstuff.js';
-import { addItem, getCart, findById, getProducts } from '../utils.js';
+import { addProducts, addItem, getCart, findById, getProducts } from '../utils.js';
 //findById,
 //findbyID is a function from yesterday which I will go back and write at the end of the day
 
@@ -86,3 +86,18 @@ test('addItem should add an item if its not already there', (expect) =>{
     expect.deepEqual(cart, expected);
 
 });
+
+test('addProduct should add a product to the products array', (expect)=>{
+    // arrange
+    let products = getProducts();
+    const newHauntedProduct = {
+        id: '6',
+        name: 'Haunted Dice',
+        img: '../assets/dice.jpg',
+        rating: '8',
+        price: '$1,000',
+        origin: 'uknown',
+        description: 'These dice are very old and very haunted'
+
+    }
+};
