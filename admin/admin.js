@@ -17,6 +17,7 @@ form.addEventListener('submit', (e) => {
     };
 
     addProducts(newHaunted);
-    console.log(newHaunted);
+    //console.log(newHaunted);
+    form.reset();
 
 });
