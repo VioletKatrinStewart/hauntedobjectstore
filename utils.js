@@ -56,9 +56,11 @@ export function getProducts() {
     return productObject || hauntedStuff;
 }
 
-export function addProducts() {
-    
-
+export function addProducts(newHauntedItem) {
+    let products = getProducts();
+    products.push(newHauntedItem);
+    let productsString = JSON.stringify(products);
+    localStorage.setItem('PRODUCTS', productsString);
 
 }
 

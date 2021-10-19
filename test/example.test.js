@@ -87,9 +87,11 @@ test('addItem should add an item if its not already there', (expect) =>{
 
 });
 
-test('addProduct should add a product to the products array', (expect)=>{
-    // arrange
+test('addProduct should add a product to the localStorage array', (expect)=>{
+    localStorage.removeItem('PRODUCTS');
     let products = getProducts();
+    let string = JSON.stringify(products);
+    localStorage.setItem('PRODUCTS', string);
     const newHauntedProduct = {
         id: '6',
         name: 'Haunted Dice',
@@ -99,5 +101,8 @@ test('addProduct should add a product to the products array', (expect)=>{
         origin: 'uknown',
         description: 'These dice are very old and very haunted'
 
-    }
-};
+    };
+    addProducts(newHauntedProduct);
+    products = getProducts();
+    expect.equal(products.length, 6);
+});
